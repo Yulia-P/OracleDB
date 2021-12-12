@@ -1,0 +1,10 @@
+--shutdown IMMEDIATE;
+--STARTUP MOUNT;
+--alter database ARCHIVELOG;
+--alter database open;
+
+--shutdown immediate
+--startup mount;
+--alter database noarchivelog;
+--select name, log_mode from v$database;
+--alter database open;
