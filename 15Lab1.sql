@@ -37,7 +37,7 @@ end;
 
 insert into company values(11, 'Company 11', 'c11');
 update company set organization='Company TT' where id =1;
-delete company where id =2;
+delete company where id = 2;
 
 --5
 --drop trigger before_trigger_row_5;
@@ -57,19 +57,6 @@ end;
 
 update company set p='Cc';
 delete company;
-
-insert all 
-   into company (id, company, p) values (1, 'Company 1', 'c1')
-   into company (id, company, p) values (2, 'Company 2', 'c2')
-   into company (id, company, p) values (3, 'Company 3', 'c3')
-   into company (id, company, p) values (4, 'Company 4', 'c4')
-   into company (id, company, p) values (5, 'Company 5', 'c5')
-   into company (id, company, p) values (6, 'Company 6', 'c6')
-   into company (id, company, p) values (7, 'Company 7', 'c7')
-   into company (id, company, p) values (8, 'Company 8', 'c8')
-   into company (id, company, p) values (9, 'Company 9', 'c9')
-   into company (id, company, p) values (10, 'Company 10', 'c10')
-select * from company;
 
 --7
 --drop trigger after_trigger_insert;
@@ -98,7 +85,7 @@ after delete on company
     dbms_output.put_line('after_trigger_delete WORKED');
   end;
   
-delete company where id = 2;
+delete company where id = 12;
 
 --8
 --drop trigger after_trigger_insert_row;

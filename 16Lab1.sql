@@ -32,7 +32,7 @@ select * from user_tab_partitions where TABLE_NAME = 'T_RANGE';
 create table T_INTERVAL(
   id number,
   ttime date)  
-partition by range(ttime) interval (numtoyminterval(1,'month'))(
+  partition by range(ttime) interval (numtoyminterval(1,'month'))(
   partition ti1 values less than  (to_date ('1-4-2009', 'dd-mm-yyyy')),
   partition ti2 values less than  (to_date ('1-8-2015', 'dd-mm-yyyy')),
   partition ti3 values less than  (to_date ('1-12-2021', 'dd-mm-yyyy')));
